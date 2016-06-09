@@ -11,7 +11,14 @@ function routeConfig($stateProvider) {
       templateUrl: mainTpl,
       controller: require('./main.controller')
       //controllerAs: 'main',
-    });
+    })
+
+    .state('out', {
+      url: '/out',
+      template: "<div>sdfasdfa</div>",
+      controller: require('./tab.controller')
+      //controllerAs: 'main',
+    })
 
 }
 

@@ -20,6 +20,10 @@ import "angular-resource";
 
 import "angular-ui-grid/ui-grid.js";
 
+import "angular-animate";
+
+import "angular-ui-bootstrap";
+
 
 
 // local scripts

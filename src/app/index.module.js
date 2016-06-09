@@ -13,7 +13,8 @@ const App = angular.module(
   	"ngMessages", 
   	"ngResource",
     "ui.grid",
-    //"uiGrid",
+    "ngAnimate",
+    "ui.bootstrap",
 
     // core
     require("./core/core.module").name,
