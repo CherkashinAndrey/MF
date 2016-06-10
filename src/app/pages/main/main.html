@@ -1,19 +1,24 @@
     <div class="container">
 	    <uib-tabset active="activeForm">
-	      <uib-tab index="0" heading="In">
-	      	
+	      <uib-tab index="0" heading="In" ui-sref=".in">
+	      		1
 	      </uib-tab>
-	      <uib-tab index="1" heading="out">
-
+	      <uib-tab index="1" heading="out" ui-sref=".out">
+				2
 	      </uib-tab> 
-	      <uib-tab index="2" heading="arhiv">
-
+	      <uib-tab index="2" heading="arhiv" ui-sref=".arhiv">
+				3
 	      </uib-tab>
-	    </uib-tabset>        
+
+
+	    </uib-tabset>   
+
+		<div ui-view></div>
+
     </div>
 
-<div class="well">
+<!-- <div class="well">
 	<div class="class="col-md-12"">
 		<div id="grid1"  ui-grid="{ data: myData }" class="grid"></div>	
 	</div>
-</div>
+</div> -->

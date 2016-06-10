@@ -1,28 +1,10 @@
 'use strict';
 
-function TabController($log, $scope) {
+function TabController($scope, data) {
   'ngInject';
 
-  $scope.myData = [
-            {
-                "firstName": "111",
-                "lastName": "2222",
-                "company": "3333",
-                "employed": true
-            },
-            {
-                "firstName": "4Lorraine",
-                "lastName": "4Wise",
-                "company": "4Comveyer",
-                "employed": false
-            },
-            {
-                "firstName": "5Nancy",
-                "lastName": "5Waters",
-                "company": "5Fuelton",
-                "employed": false
-            }
-        ];
+  $scope.myData = data;
+        console.log($scope.myData);
 
 }
 

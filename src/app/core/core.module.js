@@ -7,5 +7,7 @@ require('./directives/validation-test/validation-test.directive')(shared);
 require('./services/constants')(shared);
 require('./services/store.factory')(shared);
 require('./services/resolver.provider')(shared);
+require('./services/tab.service')(shared);
+require('./services/persmissions.service')(shared);
 
 export default shared;

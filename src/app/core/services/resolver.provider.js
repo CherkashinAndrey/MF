@@ -7,7 +7,6 @@ export default function (app) {
         this.asyncPagePrealoading = asyncPagePrealoading;
         this.$get = function() { return this; };
     }
-
     
         function asyncPagePrealoading ($q) {
             "ngInject";

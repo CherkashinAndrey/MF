@@ -3,7 +3,7 @@
 function MainController($log, $scope) {
   'ngInject';
 
-  $log.debug('Hello from main controller!');
+  // $log.debug('Hello from main controller!');
 
   $scope.myData = [
             {
@@ -26,6 +26,7 @@ function MainController($log, $scope) {
             }
         ];
 
+        console.log( $scope.myData);
 }
 
 export default MainController;
