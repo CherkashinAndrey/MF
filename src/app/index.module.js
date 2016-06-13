@@ -26,7 +26,10 @@ const App = angular.module(
     require("./index.routes").name,
 
     // pages
-    require("./pages/main/main.module").name
+    require("./pages/main/main.module").name,
+
+    //controller login
+    require("./pages/login/login.module").name,
 
   ]
 );

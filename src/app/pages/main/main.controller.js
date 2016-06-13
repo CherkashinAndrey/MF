@@ -26,7 +26,7 @@ function MainController($log, $scope) {
             }
         ];
 
-        console.log( $scope.myData);
+        console.log($scope.myData);
 }
 
 export default MainController;

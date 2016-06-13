@@ -1,20 +1,25 @@
-function LoginController ($log, $state, $scope, toastr, states, sailsAuthService, sailsService) {
+function LoginController ($log, /*$state,*/ $scope, loginServices/*, toastr, states, sailsAuthService, sailsService*/) {
   'ngInject';
-
+  console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
   $scope.sending = false;
   $scope.signin = signin;
-  $scope.states = states;
-  $scope.passwordPattern = '.{1,}';
+  debugger
+ // $scope.states = states;
+  //$scope.passwordPattern = '.{1,}';
   //$scope.resetPassword = resetPassword;
-  $scope.changePassword = changePassword;
+  //$scope.changePassword = changePassword;
 
   function signin () {
+    // inspection on validation
     if($scope.authForm.$invalid) {
       toastr.warning('Fieldes hasn\'t be empty!');
       return
     }
+    //slise
     $scope.sending = true;
-    sailsAuthService.signInUserByEmail({
+    debugger
+
+    this.loginServices.getLogin({
       email: $scope.email,
       password: $scope.passw || $scope.newPassword
     }).then( (r) => {
@@ -25,6 +30,20 @@ function LoginController ($log, $state, $scope, toastr, states, sailsAuthService
       $log.error(err);
       $scope.sending = false;
     });
+
+
+    // sailsAuthService.signInUserByEmail({
+    //   email: $scope.email,
+    //   password: $scope.passw || $scope.newPassword
+    // }).then( (r) => {
+    //   console.log(r);
+    //   $state.go(states.HOME);
+    // }).catch( err => {
+    //   toastr.error(err.error.data.message, 'Error');
+    //   $log.error(err);
+    //   $scope.sending = false;
+    // });
+
   }
 
 /*  function resetPassword () {
@@ -44,6 +63,10 @@ function LoginController ($log, $state, $scope, toastr, states, sailsAuthService
       $scope.sending = false;
     });
   }*/
+
+
+
+  /*
 
    function changePassword () {
     if ($scope.newPassword !== $scope.newPassword2) {
@@ -67,7 +90,7 @@ function LoginController ($log, $state, $scope, toastr, states, sailsAuthService
       } else {
       toastr.error('Not all fields are filled', 'Error');
     }
-  }  
+  }  */
 
 }
 

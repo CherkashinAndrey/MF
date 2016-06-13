@@ -52,27 +52,16 @@ function routeConfig($stateProvider) {
             }
     })
 
-    // .state(states.LOGIN, {
-    //   url: '/login',
-    //   data: {
-    //       roles: roles.ANONIM
-    //   },
-    //   views: {
-    //     'content@': {
-    //       templateUrl: require('!!file-loader?name=templates/[name].[ext]!./pages/login/login.html'),
-    //       controller: 'LoginController'
-    //     }
-    //   },
-    //   resolve: {
-    //     asyncPreloading: resolverProvider.loginPagePrealoading
-    //   }
-    // })       
+
+
     // .state(states.SITE, {
     //   'abstract': true,
     //   resolve: {
     //     user : sailsResolverProvider.loadUser
     //   }
     // })
+
+
     // .state(states.ADMIN, {
     //   parent: states.SITE,
     //   url: '/admin',
@@ -93,6 +82,7 @@ function routeConfig($stateProvider) {
     //       }
     //   }
     // })
+
     // .state(states.MANAGER, {
     //   parent: states.SITE,
     //   url: '/manager',
@@ -115,6 +105,7 @@ function routeConfig($stateProvider) {
     //       }
     //   }
     // })
+
     // .state(states.SETTINGS, {
     //   parent: states.SITE,
     //   url: '/settings',
@@ -137,7 +128,7 @@ function routeConfig($stateProvider) {
     // });
 
 
- // $urlRouterProvider.otherwise('/login');
+ 
 
     
 

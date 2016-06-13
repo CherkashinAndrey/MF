@@ -1,11 +1,31 @@
 'use strict';
 
-function routeConfig($urlRouterProvider) {
+function routeConfig($urlRouterProvider, $stateProvider) {
   'ngInject';
+console.log(require('!!file!./pages/login/login.html'));
+
+	$stateProvider
+    .state('login', {
+        url: '/login',
+        // data: {
+        //     roles: roles.ANONIM
+        // },
+        templateUrl: require('!!file!./pages/login/login.html'),
+        controller: 'LoginController'
+    }),
+    
+    // .state('login', {
+    //     url: '/login',
+    //     // data: {
+    //     //     roles: roles.ANONIM
+    //     // },
+    //     templateUrl: require('!!file!./pages/login/login.html'),
+    //     controller: 'LoginController'
+    // }),   
 
 
+    $urlRouterProvider.otherwise('/login');
 
-  $urlRouterProvider.otherwise('/');
 
 }
 

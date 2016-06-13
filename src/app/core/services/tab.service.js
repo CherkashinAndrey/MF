@@ -5,6 +5,7 @@ export default function (app) {
 
         function tabServices ($http) {
           'ngInject';
+          debugger
             return {
                 getIn: function(id) {
                  return [
