@@ -1,10 +1,10 @@
-function LoginController ($log, /*$state,*/ $scope, loginServices/*, toastr, states, sailsAuthService, sailsService*/) {
+function LoginController ($log, $state, $scope, loginServices,  states/*,toastr, sailsAuthService, sailsService*/) {
   'ngInject';
   console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
   $scope.sending = false;
   $scope.signin = signin;
-  debugger
- // $scope.states = states;
+  $scope.loginServices = loginServices;
+  $scope.states = states;
   //$scope.passwordPattern = '.{1,}';
   //$scope.resetPassword = resetPassword;
   //$scope.changePassword = changePassword;
@@ -17,16 +17,17 @@ function LoginController ($log, /*$state,*/ $scope, loginServices/*, toastr, sta
     }
     //slise
     $scope.sending = true;
-    debugger
 
-    this.loginServices.getLogin({
+
+    $scope.loginServices.signin({
       email: $scope.email,
       password: $scope.passw || $scope.newPassword
     }).then( (r) => {
       console.log(r);
-      $state.go(states.HOME);
+      $state.go('main');
     }).catch( err => {
-      toastr.error(err.error.data.message, 'Error');
+     // toastr.error(err.error.data.message, 'Error');
+     console.log("Error", err);
       $log.error(err);
       $scope.sending = false;
     });

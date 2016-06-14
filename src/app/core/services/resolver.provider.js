@@ -21,7 +21,6 @@ export default function (app) {
 
         function loginPagePrealoading () {
             "ngInject";
-            debugger;
             console.log("-->>>>>>> loginPagePrealoading")
             var deferred = $q.defer();
             require.ensure([], function (require) {

@@ -5,7 +5,6 @@ export default function (app) {
 
         function tabServices ($http) {
           'ngInject';
-          debugger
             return {
                 getIn: function(id) {
                  return [
@@ -36,19 +35,24 @@ export default function (app) {
                               "firstName": "getOut1",
                               "lastName": "getOut1",
                               "company": "getOut1",
-                              "employed": true
+                              "employed": true,
+                              "xml": '<?xml version="1.0"?><PurchaseOrder PurchaseOrderNumber="99503"OrderDate="1999-10-20"><Address Type="Shipping"><Name>Ellen Adams</Name><Street>123 Maple Street</Street>    <City>Mill Valley</City>'
                           },
                           {
                               "firstName": "getOut2",
                               "lastName": "getOut3",
                               "company": "4Comveyer4",
-                              "employed": false
+                              "employed": false,
+                              "xml": '<?xml version="1.0"?><PurchaseOrder PurchaseOrderNumber="99503"OrderDate="1999-10-20"><Address Type="Shipping"><Name>Ellen Adams</Name><Street>123 Maple Street</Street>    <City>Mill Valley</City>'
+                          
                           },
                           {
                               "firstName": "getOut6",
                               "lastName": "getOut7",
                               "company": "getOut8",
-                              "employed": false
+                              "employed": false,
+                              "xml": '<?xml version="1.0"?><PurchaseOrder PurchaseOrderNumber="99503"OrderDate="1999-10-20"><Address Type="Shipping"><Name>Ellen Adams</Name><Street>123 Maple Street</Street>    <City>Mill Valley</City>'
+                          
                           }
                       ];
                 },
