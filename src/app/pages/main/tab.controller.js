@@ -9,7 +9,7 @@ function TabController($scope, data) {
 
   $scope.gridOptions.columnDefs  = [
          { name: 'firstName' },
-         { name: 'lastName', cellTemplate: '<a>$scope.data.lastName</a>'},
+         { name: 'lastName', cellTemplate: '<a>{{$scope.data.lastName}}</a>' },
          { name: 'ShowScope',
             cellTemplate:'<button class="btn primary" ng-click="grid.appScope.showMe(grid.renderContainers.body.visibleRowCache.indexOf(row))">Click Me</button>' }
        ];

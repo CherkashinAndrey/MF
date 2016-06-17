@@ -16,31 +16,36 @@ export default function NavbarDirective() {
 }
 
 class NavbarController {
-  constructor ($rootScope, $scope, toastr, actions, roles, states, sailsService, sailsAuthService, $uibModal) {
+  constructor ($rootScope, $scope/*, toastr, actions, roles, states, sailsService, sailsAuthService, $uibModal*/) {
     'ngInject';
-    this.sailsAuthService = sailsAuthService;
-    this.sailsService = sailsService;
-    this.states = states;
+    debugger;
+  //  this.sailsAuthService = sailsAuthService;
+  //  this.sailsService = sailsService;
+  /*  this.states = states;
     this.roles = roles;
     this.isCollapsed = false;
     this.user = {};
     this.actions = actions;
     this.toastr = toastr;
     this.$uibModal = $uibModal;
-    this.activate($rootScope, $scope);
+    this.activate($rootScope, $scope);*/
+
   }
 
+  
+/*
   activate($rootScope, $scope) {
     let destr = $rootScope.$on(this.actions.USERLOADED,
                   (ev, user) => this.user = user );
     $scope.$on('destroy', destr);
   }
-
+*/
   logOut() {
-    this.sailsAuthService.logOut();
+    
+   // this.sailsAuthService.logOut();
     this.user = {};
   }
-
+/*
   isAdmin() {
     return this.user.role == this.roles.ADMIN;
   }
@@ -56,7 +61,7 @@ class NavbarController {
   editProfile() {
     this.toastr.info('this feature in development state');
   }
-
+/*
   settings() {
     this.$uibModal.open({
         templateUrl: require('!!file!../userTools/modal/settings/settingsForm.html'),
@@ -66,5 +71,5 @@ class NavbarController {
           settings: this.sailsService.getSettings
         }
       });
-  }
+  }*/
 }

@@ -1,17 +1,19 @@
 <nav class="navbar navbar-fixed-top navbar-inverse main-navbar">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle navbar__toggle-btn" ng-if='vm.user.role' ng-click="vm.collapsed()">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://chisw.com" target="_blank">
+
+<!--         <button type="button" class="navbar-toggle navbar__toggle-btn" ng-if='vm.user.role' ng-click="vm.collapsed()">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> -->
+      <a class="navbar-brand" href="http://google.com" target="_blank">
         <img src="../../../assets/images/logo.png" class="text centr">
       </a>
     </div>
+
     <div class="navbar-collapse collapse in navbar__collapse" id="myNavbar" aria-expanded="true" uib-collapse="!vm.isCollapsed">
-      <ul class="nav navbar-nav main-navbar__menu">
+<!--       <ul class="nav navbar-nav main-navbar__menu">
         <li ng-if='vm.user.role'>
           <a ui-sref-active="chi-tab--active" ui-sref={{vm.states.HOME}} class="chi-tab"><span class="glyphicon glyphicon-home chi-glyphicon"></span>Home</a>
         </li>
@@ -23,14 +25,14 @@
           <a ui-sref-active="chi-tab--active" ui-sref={{vm.states.MANAGER}} class="chi-tab">
           <span class="glyphicon glyphicon-user chi-glyphicon"></span>Manager</a>
         </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right" ng-if="vm.user.id">
+      </ul> -->
+      <ul class="nav navbar-nav navbar-right" >
         <li><a href="" class="navbar__user"><span class="glyphicon glyphicon-user chi-glyphicon"></span>{{vm.user.firstname + " " + vm.user.lastname}}</a></li>
         <li ng-if='vm.isManager() || vm.isAdmin()'>
           <a href="" ng-click="vm.settings()" class="logout">
           <span class="glyphicon glyphicon-cog chi-glyphicon"></span>Settings</a>
         </li>
-        <li><a ui-sref={{vm.states.LOGIN}} ng-click="vm.logOut()" class="logout"><span class="glyphicon glyphicon-log-out chi-glyphicon"></span>Logout</a>
+        <li><a ui-sref={{vm.states}} ng-click="vm.logOut()" class="logout"><span class="glyphicon glyphicon-log-out chi-glyphicon"></span>Logout</a>
         </li>
       </ul>
     </div>
